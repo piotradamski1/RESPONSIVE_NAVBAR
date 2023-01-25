@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="code.js"></script>
+    <title>Jabłko</title>
+</head>
+<body>
+    <div id="root">
+        <nav id="header">
+            <ul id="navbar">
+                <li id="navbar-logo"><a href="index.html"><img src="media/logo.png" alt="Start" width="50px" height="50px"></a></li>
+                <li><a href="podstrona.html"><span>Aktualności</span></a></li>
+                <li><a href="podstrona.html"><span>Inwestorzy</span></a></li>
+                <li><a href="podstrona.html"><span>Oferta</span></a></li>
+                <li><a href="podstrona.html"><span>O nas</span></a></li>
+                <li><a href="podstrona.html"><span>Kontankt</span></a></li>
+            </ul>
+            <div id="navbar-min">
+                <div class="menu-btn" onclick="ShowListMenu(this)">
+                    <div class="barsbox">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </div>
+                <div class="menu-logo">
+                    <a href="index.html"><img src="media/logo.png" alt="Start" height="50px"></a>
+                </div>
+            </div>
+        </nav>
+        <nav id="dropdown-box">
+            <ul id="dropdown-navbar">
+                <li><a href="podstrona.html"><span>Aktualności</span></a></li>
+                <li><a href="podstrona.html"><span>Inwestorzy</span></a></li>
+                <li><a href="podstrona.html"><span>Oferta</span></a></li>                    
+                <li><a href="podstrona.html"><span>O nas</span></a></li>
+                <li><a href="podstrona.html"><span>Kontankt</span></a></li>
+            </ul>
+        </nav>
+        <div id="main">
+            <div id="slider">
+                <div id="slider-image-placeholder"></div>
+                <div id="slider-strzalka-lewo" class="slider-strzalki" data-way="left" onclick="SliderClick(this)">
+                    <div id="left-strzalka-part1" class="strzalka-part"></div>
+                    <div id="left-strzalka-part2" class="strzalka-part"></div>
+                </div>
+                <div id="slider-strzalka-prawo" class="slider-strzalki" data-way="right" onclick="SliderClick(this)">
+                    <div id="right-strzalka-part1" class="strzalka-part"></div>
+                    <div id="right-strzalka-part2" class="strzalka-part"></div>
+                </div>
+                <div id="slider-full-image" class="full-image">
+                    <div class="close-button" onclick="CloseFullImg()">X</div>
+                </div>
+            </div>
+        </div>
+        <div id="foot">
+            
+        </div>
+    </div>
+</body>
+</html>

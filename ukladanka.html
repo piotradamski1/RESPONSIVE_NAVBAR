@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>gra</title>
+    <script>
+        function ready(){
+            var tab = ["izak"]
+            var main = document.createElement("div")
+            main.id="main"
+            document.body.appendChild(main)
+
+            var zdj = document.createElement("img")
+            zdj.src="zdjecia/"+tab[0]+".jpg"
+            zdj.id="zdj"
+            document.getElementById("main").appendChild(zdj)
+
+            for(var i=0; i<4; i++){
+                var bt = document.createElement("button")
+                bt.id="bt"+(i+3)
+                bt.innerText=(i+3)+"x"+(i+3)
+                document.getElementById("main").appendChild(bt)
+            }
+        }
+        document.addEventListener("DOMContentLoaded", ready);
+        
+
+       
+    </script>
+     <style>
+
+        
+            body{
+                background: yellowgreen;
+            }
+            
+            #zdj{
+                width: 200px;
+                height: 200px;
+            }
+            #main{
+                margin: 0 auto;
+                text-align: center;
+                width: 200px;
+            }
+        </style>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,265 @@
+*{
+    font-family: 'Tahoma';
+    text-decoration: none;
+    word-spacing: 0px;
+    color: #000000;
+    font-weight: 400;
+}
+body{
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+#root{
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    min-height: 1500px;
+    background: white;
+}
+#header{
+    position: fixed;
+    width:100%;
+    height: 50px;
+    z-index: 1;
+    background: white;
+    border-bottom: 1px solid rgb(0,0,0,0.2);
+}
+#navbar{
+    margin:0 auto;
+    padding: 0 10%;
+    display: flex;
+    width: auto;
+    max-width: 1600px;
+    height: 50px;
+}
+ul#navbar li:not(#navbar-logo){
+    margin: auto;
+    padding: 8px 0;
+    display: inline-block;
+}
+ul#navbar li{
+    margin: auto;
+    display: inline-block;
+}
+ul#navbar li:not(#navbar-logo){
+    padding: 8px 0;
+}
+
+li a{
+    font-size: 1em;
+    text-align: center;
+}
+li:hover > a{
+    opacity: 50%;
+  }
+ul#navbar li:not(#navbar-logo):hover{
+    border-top: 3px solid #697a21;
+    border-radius: 3%;
+}
+#navbar-min{
+    margin: 0 auto;
+    display: none;
+    width: 96%;
+    height: 100%;
+}
+.menu-logo{
+    margin-left: -25px;
+    position: absolute;
+    left: 50%;
+    width:50px;
+    height:50px;
+    cursor: pointer;
+}
+.menu-btn{
+    margin: 0;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+#dropdown-box{
+    display:none;
+    position: fixed;
+    z-index: 1;
+    top:51px;
+    left: 0;
+    right:0;
+    height: calc(100vh - 50px);
+    overflow:auto;
+    background: white;
+}
+#dropdown-navbar{
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    list-style: none;
+}
+ul#dropdown-navbar li{
+    margin: 0 15%;
+    padding: 1em;
+    border-bottom: 1px solid rgb(0,0,0,0.2);
+    text-align: center;
+}
+.barsbox{
+    position: absolute;
+    top: 5.5px;
+    left: 7.5px;
+    width: 35px;
+    height: 39px;
+}
+.bar1, .bar2, .bar3{
+    margin: 6px 0;
+    width: 100%;
+    height: 5px;
+    border-radius: 2px;
+    background:black;
+    transition: left .01s;
+}
+.nav-droped .bar1{
+    transform: translate(0px, 11px) rotate(-45deg);
+}
+.nav-droped .bar2{
+    opacity: 0;
+}
+.nav-droped .bar3{
+    transform: translate(0px, -11px) rotate(45deg);
+}
+.nav-droped{
+    overflow:hidden;
+}
+.nav-droped #dropdown-box{
+    display: block;
+}
+#slider{
+    position: absolute;
+    height: 30vw;
+    width: 76vw;
+    left: 12vw;
+    top: 70px;
+    border: 1px solid rgb(0,0,0,0.2);
+}
+.slider-strzalki{
+    z-index:1;
+    position: absolute;
+    height: 60px;
+    width: 40px;
+    top: calc(50% - 30px);
+    cursor:pointer;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius:10%;
+}
+.slider-strzalki:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.slider-strzalki:hover .strzalka-part{
+    opacity:1;
+}
+#slider-strzalka-lewo{
+    left: 5px;
+}
+#slider-strzalka-prawo{
+    right: 5px;
+}
+.strzalka-part{
+    position:absolute;
+    width:60%;
+    left:20%;
+    height: 4px;
+    background: white;
+    opacity:1;
+}
+#left-strzalka-part1{
+    top:0;
+    transform: translate(0px, 21px) rotate(-45deg);
+}
+#left-strzalka-part2{
+    bottom:0;
+    transform: translate(0px, -21px) rotate(45deg);
+}
+#right-strzalka-part1{
+    top:0;
+    transform: translate(0px, 21px) rotate(45deg);
+}
+#right-strzalka-part2{
+    bottom:0;
+    transform: translate(0px, -21px) rotate(-45deg);
+}
+#slider-kropki-box{
+    z-index:1;
+    position: absolute;
+    height: 1vw;
+    bottom: 10px;
+}
+.slider-kropka{
+    position: absolute;
+    height: 100%;
+    border-radius: 50%;
+    background: white;
+}
+.slider-kropka:hover{
+    cursor: pointer;
+}
+#slider-licznik{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 5px;
+    left:5px;
+    background: blue;
+}
+#slider-image-placeholder{
+    position: absolute;
+    overflow:hidden;
+    height:100%;
+    width:100%;
+}
+.imageBox{
+    position: absolute;
+    height: 100%;
+    width:100%;
+    transition: 1s;
+}
+.full-image{
+    display:none;
+    position: fixed;
+    left: 0;
+    top:0;
+    right:0;
+    bottom:0;
+    z-index:2;
+    background-color: rgb(0,0,0,0.8);
+    background-size: contain; 
+    background-repeat:no-repeat; 
+    background-position: center center;
+}
+#lol{
+    position: absolute;
+    left: 0; 
+    width: 300px;
+    top:100%;
+    height: 400px;
+    background-color: red;
+}
+@media screen and (max-width: 800px){
+    #navbar{
+        display:none
+    }
+    #navbar-min{
+        display: block;
+    }
+    #slider{
+        left:0;
+        right:0;
+        height:140vw;
+        width: 100vw;
+    }
+}
+@media screen and (min-width: 800px){
+    .nav-droped #dropdown-box{
+        display: none;
+    }
+    #dropdown-navbar{
+        display: none;
+    }
+}
