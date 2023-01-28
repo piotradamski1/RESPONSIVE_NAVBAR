@@ -1,5 +1,4 @@
 ﻿# RESPONSIVE_NAVBAR
- Responsive navbar with slider</br>
 <b>Technologie: JS, HTML, CSS</b></br></br>
 ![navar1](https://user-images.githubusercontent.com/122048598/214642062-91a2bb8d-619a-4044-94f5-069230a17224.png) </br>
 </br>
